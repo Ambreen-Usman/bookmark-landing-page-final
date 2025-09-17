@@ -808,6 +808,16 @@ header {
   body {
     padding: 40px 40px 0 30px;
   }
+  .navigation-bar {
+    margin-right: 10px;
+  }
+  .navigation-bar li a {
+      padding: 12px 10px;
+        font-size: 14px;
+
+
+  }
+
   header {
     margin-bottom: 30px;
   } /* .navigation-bar{ display:none; } */
