@@ -19,7 +19,7 @@
 }
 html,
 body {
-  overflow-x: hidden; /* only on root */
+  overflow-x: hidden; /* for footer blue content and the picture behind shapes flow to the padding at corners otherwise blank page shows at padding */
 }
 
 body {
@@ -27,6 +27,8 @@ body {
   padding: 100px 100px 0 150px;
   font-family: "Rubik", sans-serif;
 }
+
+/*header*/
 header {
   display: flex;
   justify-content: space-between;
@@ -78,6 +80,8 @@ header {
   background-color: #ffff;
   color: var(--primary-Red);
 }
+
+
 /*SECTION BOOKMARK MANAGER*/
 .Bookmark-manager {
   display: flex;
@@ -142,12 +146,15 @@ header {
   position: absolute;
   top: 30%;
   height: 75%;
-  width: calc(100% + 120px); /* extra into the padded gutter */
+  width: calc(100% + 120px); 
   left: 120px;
   background-color: var(--primary-Blue);
   border-radius: 200px 0 0 200px;
   z-index: 0;
-} /*SECTION FEATURES*/
+} 
+
+
+/*SECTION FEATURES*/
 .features {
   display: flex;
   flex-direction: column;
@@ -177,10 +184,12 @@ header {
 .tabs {
   margin-bottom: 80px;
   text-align: center;
-} /* Hide radio buttons */
+}
+ /* Hide radio buttons */
 .tabs input[type="radio"] {
   display: none;
-} /* Tab labels */
+}
+ /* Tab labels */
 .tabs label {
   display: inline-block;
   cursor: pointer;
@@ -190,7 +199,8 @@ header {
   color: var(--grey-dark);
   letter-spacing: 0.8px;
   font-size: 20px;
-} /* Active tab label */
+} 
+/* Active tab label */
 .tabs input[type="radio"]:checked + label {
   border-bottom: 4px solid var(--primary-Red);
   color: var(--blue);
@@ -257,7 +267,9 @@ header {
 .button a {
   text-decoration: none;
   text-align: center;
-} /* Show content of checked tab */
+}
+
+/* Show content of checked tab */
 #tab1:checked ~ #content1 {
   display: flex;
 }
@@ -266,7 +278,9 @@ header {
 }
 #tab3:checked ~ #content3 {
   display: flex;
-} /*section download the extension*/
+}
+
+/*section download the extension*/
 .download-the-extension {
   display: flex;
   flex-direction: column;
@@ -341,6 +355,8 @@ header {
   background: #ffff;
   color: var(--primary-Blue);
 }
+
+/*section FAQ*/
 .FAQ {
   display: flex;
   flex-direction: column;
@@ -413,6 +429,8 @@ header {
   align-content: center;
   padding: 90px 0;
 }
+
+/*SECTION contact-us blue content */
 .blue-content {
   width: 40%;
   text-align: center;
@@ -511,6 +529,8 @@ header {
   color: var(--primary-Red);
   cursor: pointer;
 }
+
+/*section footer*/
 .footer {
   margin-left: -150px;
   margin-right: -150px;
@@ -570,6 +590,7 @@ header {
   fill: #ffff;
 }
 
+/*section overlay for mobile menu*/
 .overlay-menu {
   padding: 40px 10px 0 10px;
   position: fixed;
@@ -579,16 +600,11 @@ header {
   height: 100%;
   z-index: 1000;
   background: hsla(229, 31%, 21%, 0.97);
-
   display: flex;
   flex-direction: column;
-
   opacity: 0;
   transform: translateX(100%);
   visibility: hidden;
-  /* opacity: 1;
-  transform: translateX(0);
-  visibility: visible; */
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }
 
@@ -662,9 +678,6 @@ header {
   color: var(--blue);
 }
 #menu-toggle:checked + .overlay-menu {
-  /* opacity: 0;
-  transform: translateX(100%);
-  visibility: hidden; */
   opacity: 1;
   transform: translateX(0);
   visibility: visible;
@@ -820,7 +833,7 @@ header {
 
   header {
     margin-bottom: 50px;
-  } /* .navigation-bar{ display:none; } */
+  } 
   .Bookmark-manager {
     display: flex;
     flex-direction: column;
